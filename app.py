@@ -32,9 +32,9 @@ def main():
     st.markdown(template,unsafe_allow_html=True)
     img=Image.open("house.jpg")
     st.image(img,width=300,caption="House-worth")
-    house_age=st.text_input("STORIES","enter your house stories")
-    distance_to_nearest_metro=st.text_input("NUMBER OF BATHROOMS","enter your number of bathrooms")
-    no_of_nearby_stores = st.text_input("NUMBER OF PARKINGS","enter no. of PARKINGS")
+   stories=st.text_input("STORIES","enter your house stories")
+   bathrooms =st.text_input("NUMBER OF BATHROOMS","enter your number of bathrooms")
+    parking = st.text_input("NUMBER OF PARKINGS","enter no. of PARKINGS")
     result=""
     if st.button("predict"):
         result=(predict(stories,bathrooms,parking))
